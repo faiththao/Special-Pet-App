@@ -36,6 +36,8 @@ const homeButton = document.getElementById('home-button')
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const cheeseburger = 'https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png'//assigning an image from the web to a variable
 const cheeseburgerButton = document.getElementById('cheeseburger-button')//grabbing a specific button and assigning to a variable
+const kimchi = 'https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png'
+const kimchiButton = document.getElementById('kimchi-button')
 
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
@@ -105,6 +107,11 @@ cheeseburgerButton.addEventListener('click', (e) => {//adding event listener to 
     e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
     foodSelect(cheeseburger, `"Yum I love cheeseburgerzzzzzzzz"`)//calls foodSelect every time button is pushed with specific parameter of cheeseburger                                                                  
                                                                 //and whatever message you want displayed
+})
+
+kimchiButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    foodSelect(kimchi, `"Wow kimchi is delish :)"`)
 })
 
 //event listener for the card where pet is displayed because the card is actually a form. each of the above button clicks allows the user to add to the form
