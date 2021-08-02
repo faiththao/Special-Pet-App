@@ -1,0 +1,78 @@
+body {/*sets the color of the whole page to grey and centers all text alignment*/
+    background: rgb(204, 204, 204);
+    text-align: center;
+}
+
+div {/*gives each div 10px of space surrounding it and aligns the side by side rather than up and down. all of the buttons are in divs*/
+    display: inline-block;
+    margin: 10px;
+}
+
+.pet-name {/*styling for the pet name displayed in bottom of card*/
+    margin-top: 0px;
+}
+
+.title {/*styling for the page title*/
+    margin-bottom: 0px;
+}
+
+.card {/*styling for the card*/
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*adds shadow to card*/
+    width: 500px;
+    text-align: center;
+    min-height: 540px;/*sets a min height but allows to get taller if needed (if theres a long description it will make room for all the words)*/
+    margin: 0 auto;/*centers item*/
+    margin-top: 40px;
+    padding: 20px;/*space inside item*/
+    display: block;
+}
+ .image-area {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    margin: 20px;
+    position: relative;/*centers the image area inside the card*/
+ }
+
+  .info-container {/*sets size of text area*/
+    min-width: 300px;
+    min-height: 50px;
+  }
+
+  .submit-button {/*styles post button*/
+      margin-top: 20px;
+      width: 110px;
+      padding: 10px;
+  }
+
+  .pet {/*class used on all pet images*/
+    max-width: 200px;
+    position: absolute;/*i think this allows layering of images or placement*/
+    left: 40px;/*positions the image within the image area*/
+    top: 20px;
+    z-index: 2;/*items with a higher z index will be places infront of images with a lower z index, so allows layering*/
+}
+
+.wings {/*class used specifically for wings, will create more classes for other accessory options*/
+    position: absolute;
+    max-width: 380px;
+    left: 10px;
+    top: 20px;
+    z-index: 1;/*lower z index than pet so it will be placed behind pet*/
+  }
+
+  .background {/*class used on all background images*/
+    width: 400px;
+    height: 400px;
+    z-index: 0;/*lowest z index so it will go behind all other elements*/
+  }
+
+  .food {/*class used on all food images*/
+      position: absolute;
+      max-width: 150px;
+      right: 10px;
+      bottom: 20px;
+      z-index: 1;
+  }

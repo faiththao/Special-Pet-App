@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script defer type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <h1 class="title">Special Pet</h1>
+        <form id="pet-appearance-form">
+            <div id="name-field">
+            <p>Pet Name:</p>
+                <input
+                    id="name-input"
+                    type="text"
+                    name="pet-name"
+                    placeholder="Add a name..."
+                />
+                <button id='name-submit'>Add</button>
+            </div>
+            <div id="personality-field">
+            <p>What's their personality like?:</p>
+                <input
+                    id="personality-input"
+                    type="text"
+                    name="pet-personality"
+                    placeholder="Add some traits..."
+                />
+                <button id='personality-submit'>Add</button>
+            </div>
+            <div id="pet-input">
+            <p>Cat Type:</p>
+                <button id='tuxedo-button'>Tuxedo Cat</button>
+                <button id='siamese-button'>Siamese Cat</button>
+                <button id='tiger-button'>Tiger</button>
+            </div>
+            <div>
+            <p>Accessories:</p>
+                <button id='wings-button'>Wings</button>
+                <button id='hat-button'>Hat</button>
+                <button id='glasses-button'>Glasses</button>
+            </div>
+            <div>   
+            <p>Where do they live?</p>
+                <button id='forest-button'>Forest</button>
+                <button id='ocean-button'>Ocean</button>
+                <button id='home-button'>Home</button>
+            </div>
+            <div>
+            <p>What do you want to feed them?</p>
+                <button id='cheeseburger-button' class='button-left'>Cheeseburger</button>
+                <button id='kimchi-button'>Kimchi</button>
+                <button id='trash-button' class='button-right'>Trash</button>
+            </div>
+        </form>
+        <form id="pet-creation-card" class="card">
+            <div id="image-area" class="image-area">
+            </div>
+            <div id="info-container" class="info-container">
+            </div>
+            <input class="submit-button" type="submit">
+        </form>
+    </body>      
+</html>
