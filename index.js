@@ -18,26 +18,28 @@ const tigerButton = document.getElementById('tiger-button')
 const wings = 'https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png'//assigning an image from the web to a variable
 const wingsClassName = 'wings'//assigning the literal name of a class to a variable
 const wingsButton = document.getElementById('wings-button')//grabbing a specific button and assigning to a variable
-const hat = 'http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf19.png'
+const hat = 'http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf1a.png'
 const hatClassName = 'hat'
 const hatButton = document.getElementById('hat-button')
-const glasses = 'https://cdn140.picsart.com/263573561020211.png'
+const glasses = 'http://3.bp.blogspot.com/-V_Q4gOLNA4A/U6eR3AqpYeI/AAAAAAAAFhc/oVrngT9PtaU/s1600/glasses_001_o.png'
 const glassesClassName = 'glasses'
 const glassesButton = document.getElementById('glasses-button')
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
 const forestButton = document.getElementById('forest-button')//grabbing a specific button and assigning to a variable
-const ocean = 'https://d.ibtimes.co.uk/en/full/1657585/ocean-floor.jpg'
+const ocean = 'https://64.media.tumblr.com/1b8ded1c7e509da3510f8fac3d9bc2d5/72e645c063acb605-84/s540x810/f8f07096b6ed8e6e8e3b2110208b55006d3f6656.jpg'
 const oceanButton = document.getElementById('ocean-button')
-const home = 'https://i.pinimg.com/originals/7e/4f/62/7e4f626d22eed7df79eb27f31c13656a.jpg'
-const homeButton = document.getElementById('home-button')
+const city = 'https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg'
+const cityButton = document.getElementById('city-button')
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const cheeseburger = 'https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png'//assigning an image from the web to a variable
 const cheeseburgerButton = document.getElementById('cheeseburger-button')//grabbing a specific button and assigning to a variable
 const kimchi = 'https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png'
 const kimchiButton = document.getElementById('kimchi-button')
+const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png'
+const trashButton = document.getElementById('trash-button')
 
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
@@ -98,9 +100,9 @@ oceanButton.addEventListener('click', (e) => {
     backgroundSelect(ocean)
 })
 
-homeButton.addEventListener('click', (e) => {
+cityButton.addEventListener('click', (e) => {
     e.preventDefault()
-    backgroundSelect(home)
+    backgroundSelect(city)
 })
 
 cheeseburgerButton.addEventListener('click', (e) => {//adding event listener to cheeseburger button
@@ -114,6 +116,10 @@ kimchiButton.addEventListener('click', (e) => {
     foodSelect(kimchi, `"Wow kimchi is delish :)"`)
 })
 
+trashButton.addEventListener('click', (e) => {
+    e.preventDefault() 
+    foodSelect(trash, `"Ew I don't like trash... but I'll still eat it"`)
+})
 //event listener for the card where pet is displayed because the card is actually a form. each of the above button clicks allows the user to add to the form
 petCreationCard.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -217,6 +223,3 @@ function renderPet(pet) {
     `
     document.querySelector('body').appendChild(card)
 }
- 
-
-
