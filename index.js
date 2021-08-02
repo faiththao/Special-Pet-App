@@ -199,8 +199,8 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent
     }
-    console.log(petObj)
     renderPet(petObj)//function to display the finished pet on the page below the creation card
+    postPet(petObj)
 }
 
 //function to hard-code the pet which was created onto the page by creating a new card and filling it with the information the user entered
@@ -223,3 +223,26 @@ function renderPet(pet) {
     `
     document.querySelector('body').appendChild(card)
 }
+
+function getAllPets() {
+    fetch('http://localhost:3000/post')
+    .then(res => res.json())
+    .then(petData => petData.forEach(pet => renderPet(pet)))
+}
+
+function postPet(petObj) {
+    fetch('http://localhost:3000/post', {
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(petObj)
+    })
+    .then(res => res.json())
+    .then(pet => console.log(pet))
+}
+
+function initialize() {
+    getAllPets()
+}
+initialize()
