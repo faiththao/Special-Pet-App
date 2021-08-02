@@ -218,7 +218,7 @@ function renderPet(pet) {
         <img src="${pet.backgroundImage}" class="background">
         <img src="${pet.foodImage}" class="food">
     </div>
-    <div class="info-container">
+    <div class="info-container pet-card-font">
         <h1 class="pet-name">${pet.name}</h1>
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>

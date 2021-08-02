@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
 body {/*sets the color of the whole page to grey and centers all text alignment*/
-    background: rgb(204, 204, 204);
+    background: radial-gradient(circle, rgba(255,252,250,1) 0%, rgba(252,158,177,1) 100%);
     text-align: center;
 }
 
@@ -9,9 +11,15 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
     font-variant: small-caps;
 }
 
-.pet-name {/*styling for the pet name displayed in bottom of card*/
+.pet-card-font {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 30px;
+}
+
+.pet-name {
     margin-top: 0px;
 }
+
 
 .title {/*styling for the page title*/
     margin-bottom: 0px;
@@ -94,3 +102,5 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
       bottom: 20px;
       z-index: 1;
   }
+
+
