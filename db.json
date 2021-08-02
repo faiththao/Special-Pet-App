@@ -43,6 +43,17 @@
       "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "id": 4
+    },
+    {
+      "name": "Donnie",
+      "personality": "Nice",
+      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
+      "accessoryImage": "http://3.bp.blogspot.com/-V_Q4gOLNA4A/U6eR3AqpYeI/AAAAAAAAFhc/oVrngT9PtaU/s1600/glasses_001_o.png",
+      "accessoryClass": "glasses",
+      "backgroundImage": "https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg",
+      "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
+      "phrase": "\"Wow kimchi is delish :)\"",
+      "id": 5
     }
   ]
 }
