@@ -63,6 +63,14 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
     z-index: 1;/*lower z index than pet so it will be placed behind pet*/
   }
 
+  .hat {
+    position: absolute;
+    max-width: 50px;
+    left: 120px;
+    top: 10px;
+    z-index: 3;
+  }
+
   .background {/*class used on all background images*/
     width: 400px;
     height: 400px;

@@ -9,7 +9,7 @@ const personalitySubmit = document.getElementById('personality-submit')//grabbin
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const tuxedoCat = 'http://www.sloppykisscards.com/images/byo/breeds/cat/bwshort.png'//assigning an image from the web to a variable
 const tuxedoButton = document.getElementById('tuxedo-button')//grabbing a specific button and assigning to a variable
-const siameseCat = 'https://pluspng.com/img-png/siamese-png-drop-a-message-274.png'
+const siameseCat = 'https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png'
 const siameseButton = document.getElementById('siamese-button')
 const tiger = 'http://pngimg.com/uploads/tiger/tiger_PNG23235.png'
 const tigerButton = document.getElementById('tiger-button')
@@ -20,7 +20,7 @@ const wingsClassName = 'wings'//assigning the literal name of a class to a varia
 const wingsButton = document.getElementById('wings-button')//grabbing a specific button and assigning to a variable
 const hat = 'http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf19.png'
 const hatClassName = 'hat'
-const hatButton
+const hatButton = document.getElementById('hat-button')
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
@@ -67,6 +67,11 @@ tigerButton.addEventListener('click', (e) => {
 wingsButton.addEventListener('click', (e) => {//adding event listener to wings button
     e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
     accessorySelect(wings, wingsClassName)//calls accessorySelect every time button is pushed with specific parameters of wings and wingsClassName
+})
+
+hatButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    accessorySelect(hat, hatClassName)
 })
 
 forestButton.addEventListener('click', (e) => {//adding event listener to forest button
