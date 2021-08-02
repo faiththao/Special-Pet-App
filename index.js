@@ -9,11 +9,18 @@ const personalitySubmit = document.getElementById('personality-submit')//grabbin
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const tuxedoCat = 'http://www.sloppykisscards.com/images/byo/breeds/cat/bwshort.png'//assigning an image from the web to a variable
 const tuxedoButton = document.getElementById('tuxedo-button')//grabbing a specific button and assigning to a variable
+const siameseCat = 'https://pluspng.com/img-png/siamese-png-drop-a-message-274.png'
+const siameseButton = document.getElementById('siamese-button')
+const tiger = 'http://pngimg.com/uploads/tiger/tiger_PNG23235.png'
+const tigerButton = document.getElementById('tiger-button')
 
 //variables for the image that will be displayed, the unique class it will have, and the button that gets pushed to select the image*****************
 const wings = 'https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png'//assigning an image from the web to a variable
 const wingsClassName = 'wings'//assigning the literal name of a class to a variable
 const wingsButton = document.getElementById('wings-button')//grabbing a specific button and assigning to a variable
+const hat = 'http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf19.png'
+const hatClassName = 'hat'
+const hatButton
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
@@ -45,6 +52,16 @@ personalitySubmit.addEventListener('click', (e) => {//adding event listener to t
 tuxedoButton.addEventListener('click', (e) => {//adding event listener to the tuxedo cat button
     e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
     petSelect(tuxedoCat)//calls petSelect every time button is pushed with specific parameter of tuxedoCat
+})
+
+siameseButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    petSelect(siameseCat)
+})
+
+tigerButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    petSelect(tiger)
 })
 
 wingsButton.addEventListener('click', (e) => {//adding event listener to wings button
@@ -92,7 +109,7 @@ function submitPersonality() {
     personalityInput.value = ''//clears the text from the input area
 }
 
-function petSelect(petImage) {   
+function petSelect(petImage) { 
     const image = document.createElement('img')//creates an img element
     image.src = petImage//sets the src to whatever image is passed into the function
     image.id = 'pet-image'
