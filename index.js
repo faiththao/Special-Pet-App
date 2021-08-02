@@ -28,6 +28,10 @@ const glassesButton = document.getElementById('glasses-button')
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
 const forestButton = document.getElementById('forest-button')//grabbing a specific button and assigning to a variable
+const ocean = 'https://d.ibtimes.co.uk/en/full/1657585/ocean-floor.jpg'
+const oceanButton = document.getElementById('ocean-button')
+const home = 'https://i.pinimg.com/originals/7e/4f/62/7e4f626d22eed7df79eb27f31c13656a.jpg'
+const homeButton = document.getElementById('home-button')
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const cheeseburger = 'https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png'//assigning an image from the web to a variable
@@ -85,6 +89,16 @@ glassesButton.addEventListener('click', (e) => {
 forestButton.addEventListener('click', (e) => {//adding event listener to forest button
     e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
     backgroundSelect(forest)//calls backgroundSelect every time button is pushed with specific parameter of forest
+})
+
+oceanButton.addEventListener('click', (e) => {
+    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
+    backgroundSelect(ocean)
+})
+
+homeButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    backgroundSelect(home)
 })
 
 cheeseburgerButton.addEventListener('click', (e) => {//adding event listener to cheeseburger button
