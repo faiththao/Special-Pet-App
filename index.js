@@ -223,6 +223,3 @@ function renderPet(pet) {
     `
     document.querySelector('body').appendChild(card)
 }
- 
-
-
