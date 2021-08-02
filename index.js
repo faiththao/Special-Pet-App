@@ -21,6 +21,9 @@ const wingsButton = document.getElementById('wings-button')//grabbing a specific
 const hat = 'http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf19.png'
 const hatClassName = 'hat'
 const hatButton = document.getElementById('hat-button')
+const glasses = 'https://cdn140.picsart.com/263573561020211.png'
+const glassesClassName = 'glasses'
+const glassesButton = document.getElementById('glasses-button')
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
@@ -72,6 +75,11 @@ wingsButton.addEventListener('click', (e) => {//adding event listener to wings b
 hatButton.addEventListener('click', (e) => {
     e.preventDefault()
     accessorySelect(hat, hatClassName)
+})
+
+glassesButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    accessorySelect(glasses, glassesClassName)
 })
 
 forestButton.addEventListener('click', (e) => {//adding event listener to forest button
