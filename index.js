@@ -45,7 +45,7 @@ const trashButton = document.getElementById('trash-button')
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
 const infoContainer = document.getElementById('info-container')//grabbing the info area and assigning to a variable (where the name and personality goes)
 
-
+const postButton = document.getElementById('post-button')
 //variable for the blank card that is displayed on page load and filled with images + text************************************************************
 const petCreationCard = document.getElementById('pet-creation-card')
 
@@ -128,9 +128,13 @@ petCreationCard.addEventListener('submit', (e) => {
     infoContainer.innerHTML = ''//reset text area after form is submitted
 })
 
+window.addEventListener('load', (e) => {
+    alert('Welcome to our page!')
+})
 
 //functions for each event listener****************************************************************************************************************************
 function submitName() {
+    infoContainer.innerHTML = ''
     const h1 = document.createElement('h1')//creates an <h1> element
     const name = nameInput.value//assigns the value of nameInput (whatever text the user enters into the box) to name variable
     h1.textContent = name//assigns value of name to the h1 element 
@@ -185,7 +189,6 @@ function foodSelect(foodImage, petWords) {
     phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
     infoContainer.append(phrase)//adds the message to the text area like a quote
 }
-
 
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!

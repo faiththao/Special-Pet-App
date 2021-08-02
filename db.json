@@ -32,6 +32,17 @@
       "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
       "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
       "id": 3
+    },
+    {
+      "name": "christie",
+      "personality": "shes so fun and loves fun times",
+      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
+      "accessoryImage": "https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png",
+      "accessoryClass": "wings",
+      "backgroundImage": "https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg",
+      "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
+      "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
+      "id": 4
     }
   ]
 }
