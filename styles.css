@@ -65,9 +65,9 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
 
   .hat {
     position: absolute;
-    max-width: 50px;
-    left: 120px;
-    top: 10px;
+    max-width: 100px;
+    left: 90px;
+    top: 0px;
     z-index: 3;
   }
 
@@ -75,7 +75,7 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
     position: absolute;
     max-width: 100px;
     left: 95px;
-    top: 80px;
+    top: 70px;
     z-index: 3;
   }
 
