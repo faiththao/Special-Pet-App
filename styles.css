@@ -6,6 +6,7 @@ body {/*sets the color of the whole page to grey and centers all text alignment*
 div {/*gives each div 10px of space surrounding it and aligns the side by side rather than up and down. all of the buttons are in divs*/
     display: inline-block;
     margin: 10px;
+    font-variant: small-caps;
 }
 
 .pet-name {/*styling for the pet name displayed in bottom of card*/
@@ -14,6 +15,7 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
 
 .title {/*styling for the page title*/
     margin-bottom: 0px;
+    font-variant: small-caps;
 }
 
 .card {/*styling for the card*/
