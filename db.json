@@ -1,18 +1,1 @@
-{
-    "images": [
-        {
-            "id": "Tuxedo Cat",
-            "image": "http://www.sloppykisscards.com/images/byo/breeds/cat/bwshort.png"
-        },
 
-        {
-            "id": "Siamese Cat",
-            "image": "https://pluspng.com/img-png/siamese-png-drop-a-message-274.png"
-        },
-
-        {
-        "id": "Tiger",
-        "image": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png"
-        }
-    ]
-}
