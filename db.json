@@ -43,6 +43,28 @@
       "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "id": 4
+    },
+    {
+      "name": "ronaldo",
+      "personality": "kindof weird",
+      "petImage": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png",
+      "accessoryImage": "https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png",
+      "accessoryClass": "wings",
+      "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
+      "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
+      "phrase": "\"Wow kimchi is delish :)\"",
+      "id": 5
+    },
+    {
+      "name": "FRANK",
+      "personality": "sad boy",
+      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
+      "accessoryImage": "https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png",
+      "accessoryClass": "wings",
+      "backgroundImage": "https://64.media.tumblr.com/1b8ded1c7e509da3510f8fac3d9bc2d5/72e645c063acb605-84/s540x810/f8f07096b6ed8e6e8e3b2110208b55006d3f6656.jpg",
+      "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
+      "phrase": "\"Wow kimchi is delish :)\"",
+      "id": 6
     }
   ]
 }
