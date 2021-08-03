@@ -20,6 +20,14 @@ button {
   font-variant: small-caps;
 }
 
+.likes-count {
+  display: inline-block;
+}
+
+.like-and-delete-buttons {
+  display: block;
+}
+
 .pet-name {/*styling for the pet name displayed in bottom of card*/
     margin-top: 0px;
 }

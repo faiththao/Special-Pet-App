@@ -9,7 +9,8 @@
       "backgroundImage": "https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg",
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
-      "id": 1
+      "id": 1,
+      "likes": 4
     },
     {
       "name": "bob",
@@ -20,7 +21,8 @@
       "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
       "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
-      "id": 2
+      "id": 2,
+      "likes": null
     },
     {
       "name": "dinner",
@@ -31,7 +33,8 @@
       "backgroundImage": "https://64.media.tumblr.com/1b8ded1c7e509da3510f8fac3d9bc2d5/72e645c063acb605-84/s540x810/f8f07096b6ed8e6e8e3b2110208b55006d3f6656.jpg",
       "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
       "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
-      "id": 3
+      "id": 3,
+      "likes": null
     },
     {
       "name": "christie",
