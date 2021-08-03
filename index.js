@@ -165,7 +165,8 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         accessoryClass: document.getElementById('accessory').getAttribute('class'),
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
-        phrase: document.getElementById('phrase').textContent
+        phrase: document.getElementById('phrase').textContent,
+        likes: 0
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -188,7 +189,17 @@ function renderPet(pet) {
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>
     </div>
+    <div>
+        <button id="likes" class="likes-button">❤</button>
+        <span class="likes-count" id="likes-count">${pet.likes}
+        <button id="delete" class="delete-button">Delete</button>
+    </div>
     `
+    card.querySelector('#likes').addEventListener('click', (e) => {
+        pet.likes += 1
+        card.querySelector('#likes-count').textContent = pet.likes
+        updateLikes()
+    })
     document.querySelector('body').appendChild(card)
 }
 
@@ -205,6 +216,18 @@ function postPet(petObj) {
             'Content-Type': 'application/json'
         },
         body:JSON.stringify(petObj)
+    })
+    .then(res => res.json())
+    .then(pet => console.log(pet))
+}
+
+function updateLikes(petObj) {
+    fetch(`http://localhost:3000/post/${petObj.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(petObj)
     })
     .then(res => res.json())
     .then(pet => console.log(pet))
