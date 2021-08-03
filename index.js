@@ -193,6 +193,8 @@ function renderPet(pet) {
     </div>
     <div class="container">
         <span class="likes-count" id="likes-count">${pet.likes} likes</span>
+    <div>
+        <span class="likes-count" id="likes-count">${pet.likes}</span> likes
         <button id="likes" class="likes-button"><3</button>
     </div>
     <div>

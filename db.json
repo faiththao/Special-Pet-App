@@ -10,7 +10,7 @@
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 1,
-      "likes": 18
+      "likes": 28
     },
     {
       "name": "bob",
@@ -22,7 +22,7 @@
       "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "id": 2,
-      "likes": 1
+      "likes": 10
     },
     {
       "name": "dinner",
@@ -34,7 +34,7 @@
       "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
       "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
       "id": 3,
-      "likes": 5
+      "likes": 10
     },
     {
       "name": "christie",
@@ -46,7 +46,7 @@
       "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "id": 4,
-      "likes": 4
+      "likes": 9
     },
     {
       "name": "ronaldo",
@@ -58,7 +58,7 @@
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 5,
-      "likes": 4
+      "likes": 9
     },
     {
       "name": "FRANK",
@@ -70,7 +70,7 @@
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 6,
-      "likes": 4
+      "likes": 7
     }
   ]
 }
