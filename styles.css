@@ -20,10 +20,6 @@ button {
   font-variant: small-caps;
 }
 
-.like-and-delete-buttons {
-  display: block;
-}
-
 .likes-button {
   margin-right: 300px;
 }
