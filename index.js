@@ -191,9 +191,11 @@ function renderPet(pet) {
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>
     </div>
-    <div>
+    <div class="container">
         <span class="likes-count" id="likes-count">${pet.likes} likes</span>
         <button id="likes" class="likes-button"><3</button>
+    </div>
+    <div>
         <button id="delete" class="delete-button">Delete</button>
     </div>
     `
