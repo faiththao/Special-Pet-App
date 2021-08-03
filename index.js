@@ -49,6 +49,8 @@ const postButton = document.getElementById('post-button')
 //variable for the blank card that is displayed on page load and filled with images + text************************************************************
 const petCreationCard = document.getElementById('pet-creation-card')
 
+// let likes = 0;
+
 //event listeners for each button click, sending the corresponding image/text to the petCreationCard to be displayed for the user**********************
 buttonEventListenerNoArgs(nameSubmit, submitName)
 buttonEventListenerNoArgs(personalitySubmit, submitPersonality)
@@ -166,7 +168,7 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
-        likes: 0
+        likes: '0'
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -190,15 +192,15 @@ function renderPet(pet) {
         <p>${pet.phrase}</p>
     </div>
     <div>
-        <button id="likes" class="likes-button">❤</button>
-        <span class="likes-count" id="likes-count">${pet.likes}
+        <span class="likes-count" id="likes-count">${pet.likes} likes</span>
+        <button id="likes" class="likes-button"><3</button>
         <button id="delete" class="delete-button">Delete</button>
     </div>
     `
     card.querySelector('#likes').addEventListener('click', (e) => {
         pet.likes += 1
         card.querySelector('#likes-count').textContent = pet.likes
-        updateLikes()
+        updateLikes(pet)
     })
     document.querySelector('body').appendChild(card)
 }
