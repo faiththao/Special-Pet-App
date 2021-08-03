@@ -194,6 +194,8 @@ function renderPet(pet) {
     <div>
         <span class="likes-count" id="likes-count">${pet.likes}</span> likes
         <button id="likes" class="likes-button"><3</button>
+    </div>
+    <div>
         <button id="delete" class="delete-button">Delete</button>
     </div>
     `
@@ -202,6 +204,12 @@ function renderPet(pet) {
         card.querySelector('#likes-count').textContent = pet.likes
         updateLikes(pet)
     })
+
+    card.querySelector('#delete').addEventListener('click', (e) => {
+        card.remove()
+        deletePet(pet.id)
+    })
+
     document.querySelector('body').appendChild(card)
 }
 
@@ -230,6 +238,17 @@ function updateLikes(petObj) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(petObj)
+    })
+    .then(res => res.json())
+    .then(pet => console.log(pet))
+}
+
+function deletePet(id) {
+    fetch(`http://localhost:3000/post/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
     .then(res => res.json())
     .then(pet => console.log(pet))
