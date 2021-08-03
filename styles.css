@@ -16,6 +16,7 @@ div {/*gives each div 10px of space surrounding it and aligns the side by side r
 
 button {
   background: #abd5ff;
+  font-variant: small-caps;
 }
 
 .pet-name {/*styling for the pet name displayed in bottom of card*/

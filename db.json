@@ -45,7 +45,6 @@
       "id": 4
     },
     {
-<<<<<<< HEAD
       "name": "Donnie",
       "personality": "Nice",
       "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
@@ -55,7 +54,8 @@
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 5
-=======
+    },
+    {
       "name": "ronaldo",
       "personality": "kindof weird",
       "petImage": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png",
@@ -76,7 +76,6 @@
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 6
->>>>>>> 54f572b9ab484f090f6ad13c5e4d39dbb9666a03
     }
   ]
 }
