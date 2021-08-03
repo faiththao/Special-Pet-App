@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 body {/*sets the color of the whole page to grey and centers all text alignment*/
     background: radial-gradient(circle, rgba(255,252,250,1) 0%, rgba(252,158,177,1) 100%);
     text-align: center;
