@@ -197,7 +197,7 @@ function renderPet(pet) {
     `
     card.querySelector('#likes').addEventListener('click', (e) => {
         pet.likes += 1
-        card.getElementById('likes-count').textContent = pet.likes
+        card.querySelector('#likes-count').textContent = pet.likes
         updateLikes(pet)
     })
     document.querySelector('body').appendChild(card)

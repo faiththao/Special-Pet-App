@@ -20,10 +20,6 @@ button {
   font-variant: small-caps;
 }
 
-.likes-count {
-  display: inline-block;
-}
-
 .like-and-delete-buttons {
   display: block;
 }
