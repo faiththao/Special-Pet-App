@@ -50,76 +50,25 @@ const postButton = document.getElementById('post-button')
 const petCreationCard = document.getElementById('pet-creation-card')
 
 //event listeners for each button click, sending the corresponding image/text to the petCreationCard to be displayed for the user**********************
-nameSubmit.addEventListener('click', (e) => {//adding an event listener to the name-field submit button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    submitName()//calls submitName every time button is clicked
-})
+buttonEventListenerNoArgs(nameSubmit, submitName)
+buttonEventListenerNoArgs(personalitySubmit, submitPersonality)
 
-personalitySubmit.addEventListener('click', (e) => {//adding event listener to the poersonality-field submit button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    submitPersonality()//calls submitPersonality every time button is clicked
-})
+buttonEventListenerOneArg(window, alert, 'Welcome to our page!', 'load')
+buttonEventListenerOneArg(tuxedoButton, petSelect, tuxedoCat, 'click') 
+buttonEventListenerOneArg(siameseButton, petSelect, siameseCat, 'click')
+buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
+buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
+buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
+buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
 
-tuxedoButton.addEventListener('click', (e) => {//adding event listener to the tuxedo cat button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    petSelect(tuxedoCat)//calls petSelect every time button is pushed with specific parameter of tuxedoCat
-})
+buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
+buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
+buttonEventListenerTwoArgs(glassesButton, accessorySelect, glasses, glassesClassName)
+buttonEventListenerTwoArgs(cheeseburgerButton, foodSelect, cheeseburger, `"Yum I love cheeseburgerzzzzzzzz"`)
+buttonEventListenerTwoArgs(kimchiButton, foodSelect, kimchi, `"Wow kimchi is delish :)"`)
+buttonEventListenerTwoArgs(trashButton, foodSelect, trash, `"Ew I don't like trash... but I'll still eat it"`)
 
-siameseButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    petSelect(siameseCat)
-})
-
-tigerButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    petSelect(tiger)
-})
-
-wingsButton.addEventListener('click', (e) => {//adding event listener to wings button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    accessorySelect(wings, wingsClassName)//calls accessorySelect every time button is pushed with specific parameters of wings and wingsClassName
-})
-
-hatButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    accessorySelect(hat, hatClassName)
-})
-
-glassesButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    accessorySelect(glasses, glassesClassName)
-})
-
-forestButton.addEventListener('click', (e) => {//adding event listener to forest button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    backgroundSelect(forest)//calls backgroundSelect every time button is pushed with specific parameter of forest
-})
-
-oceanButton.addEventListener('click', (e) => {
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    backgroundSelect(ocean)
-})
-
-cityButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    backgroundSelect(city)
-})
-
-cheeseburgerButton.addEventListener('click', (e) => {//adding event listener to cheeseburger button
-    e.preventDefault()//stopping the page from refreshing on button click(necessary for every button)
-    foodSelect(cheeseburger, `"Yum I love cheeseburgerzzzzzzzz"`)//calls foodSelect every time button is pushed with specific parameter of cheeseburger                                                                  
-                                                                //and whatever message you want displayed
-})
-
-kimchiButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    foodSelect(kimchi, `"Wow kimchi is delish :)"`)
-})
-
-trashButton.addEventListener('click', (e) => {
-    e.preventDefault() 
-    foodSelect(trash, `"Ew I don't like trash... but I'll still eat it"`)
-})
+initialize()
 //event listener for the card where pet is displayed because the card is actually a form. each of the above button clicks allows the user to add to the form
 petCreationCard.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -128,10 +77,26 @@ petCreationCard.addEventListener('submit', (e) => {
     infoContainer.innerHTML = ''//reset text area after form is submitted
 })
 
-window.addEventListener('load', (e) => {
-    alert('Welcome to our page!')
-})
+function buttonEventListenerNoArgs(button, func) {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        func()
+    })
+}
 
+function buttonEventListenerOneArg(button, func, arg, event) {
+    button.addEventListener(`${event}`, (e) => {
+        e.preventDefault()
+        func(arg)
+    })
+}
+
+function buttonEventListenerTwoArgs(button, func, arg1, arg2) {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        func(arg1, arg2)
+    })
+}
 //functions for each event listener****************************************************************************************************************************
 function submitName() {
     infoContainer.innerHTML = ''
@@ -218,7 +183,7 @@ function renderPet(pet) {
         <img src="${pet.backgroundImage}" class="background">
         <img src="${pet.foodImage}" class="food">
     </div>
-    <div class="info-container pet-card-font">
+    <div class="info-container">
         <h1 class="pet-name">${pet.name}</h1>
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>
@@ -248,4 +213,3 @@ function postPet(petObj) {
 function initialize() {
     getAllPets()
 }
-initialize()

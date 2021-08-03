@@ -1,31 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 body {/*sets the color of the whole page to grey and centers all text alignment*/
     background: radial-gradient(circle, rgba(255,252,250,1) 0%, rgba(252,158,177,1) 100%);
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+p {
+  font-size: 25px;
 }
 
 div {/*gives each div 10px of space surrounding it and aligns the side by side rather than up and down. all of the buttons are in divs*/
     display: inline-block;
     margin: 10px;
-    font-family: 'Style Script', cursive;
-    font-weight: 300;
-    font-size: 16pt;
-    font-variant: small-caps;
 }
 
 button {
   background: #abd5ff;
-  font-variant: small-caps;
-  font-family: Arial, Helvetica, sans-serif;
 }
-
-.pet-card-font {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 20px;
-}
-
 
 .pet-name {/*styling for the pet name displayed in bottom of card*/
     margin-top: 0px;
@@ -34,8 +25,6 @@ button {
 
 .title {/*styling for the page title*/
     margin-bottom: 0px;
-    font-variant: small-caps;
-    font-family: 'Style Script', cursive;
     font-size: 30pt;
 }
 
@@ -62,8 +51,6 @@ button {
   .info-container {/*sets size of text area*/
     min-width: 300px;
     min-height: 50px;
-    font-family: 'Style Script', cursive;
-    font-variant: normal;
   }
 
   .submit-button {/*styles post button*/
