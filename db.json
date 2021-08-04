@@ -107,6 +107,45 @@
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "likes": 3,
       "id": 8
+    },
+    {
+      "name": "ezekiel",
+      "personality": "religious",
+      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
+      "accessoryImage": "http://3.bp.blogspot.com/-V_Q4gOLNA4A/U6eR3AqpYeI/AAAAAAAAFhc/oVrngT9PtaU/s1600/glasses_001_o.png",
+      "accessoryClass": "glasses",
+      "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
+      "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
+      "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
+      "likes": 4,
+      "cardColor": "rgb(255, 242, 182)",
+      "id": 9
+    },
+    {
+      "name": "beep",
+      "personality": "craaaaaazy",
+      "petImage": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png",
+      "accessoryImage": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf1a.png",
+      "accessoryClass": "hat",
+      "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
+      "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
+      "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
+      "likes": 4,
+      "cardColor": "rgb(180, 187, 243)",
+      "id": 10
+    },
+    {
+      "name": "kdbhfkshdkfgh",
+      "personality": "cxbsfxbd",
+      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
+      "accessoryImage": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf1a.png",
+      "accessoryClass": "hat",
+      "backgroundImage": "https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg",
+      "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
+      "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
+      "likes": 0,
+      "cardColor": "rgb(255, 242, 182)",
+      "id": 11
     }
   ]
 }

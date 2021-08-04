@@ -68,9 +68,12 @@ buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
 buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
 buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
 buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
-// buttonEventListenerOneArg(redButton, cardBackground, red, 'click')
-
-
+////////////////////////////////////////////////////////////////////////////
+buttonEventListenerOneArg(redButton, cardBackground, 'red', 'click')
+buttonEventListenerOneArg(pinkButton, cardBackground, 'pink', 'click')
+buttonEventListenerOneArg(blueButton, cardBackground, 'blue', 'click')
+buttonEventListenerOneArg(yellowButton, cardBackground, 'yellow', 'click')
+/////////////////////////////////////////////////////////////////////////////
 buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
 buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
 buttonEventListenerTwoArgs(glassesButton, accessorySelect, glasses, glassesClassName)
@@ -109,38 +112,34 @@ function buttonEventListenerTwoArgs(button, func, arg1, arg2) {
     })
 }
 
-redButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    function cardBackground(color) {
-        petCreationCard.style.backgroundColor = 'red'
-    }
-    cardBackground();
-})
+// redButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     cardBackground();
+// })
 
-pinkButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    function cardBackground(color) {
-        petCreationCard.style.backgroundColor = 'pink'
-    }
-    cardBackground();
-})
+// pinkButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     function cardBackground(color) {
+//         petCreationCard.style.backgroundColor = 'pink'
+//     }
+//     cardBackground();
+// })
 
-blueButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    function cardBackground(color) {
-        petCreationCard.style.backgroundColor = 'blue'
-    }
-    cardBackground();
-})
+// blueButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     function cardBackground(color) {
+//         petCreationCard.style.backgroundColor = 'blue'
+//     }
+//     cardBackground();
+// })
 
-yellowButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    function cardBackground(color) {
-        petCreationCard.style.backgroundColor = 'yellow'
-    }
-    cardBackground();
-})
-
+// yellowButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     function cardBackground(color) {
+//         petCreationCard.style.backgroundColor = 'yellow'
+//     }
+//     cardBackground();
+// })
 //functions for each event listener****************************************************************************************************************************
 function submitName() {
     infoContainer.innerHTML = ''
@@ -175,7 +174,7 @@ function accessorySelect(accessoryImage, accessoryClass) {
     image.src = accessoryImage//sets the src to whatever image is passed into the function
     image.id = 'accessory'
     image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
-                                             //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
+    //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
     imageArea.append(image)//adds the accessory to the image area
 }
 
@@ -199,6 +198,9 @@ function foodSelect(foodImage, petWords) {
     infoContainer.append(phrase)//adds the message to the text area like a quote
 }
 
+function cardBackground(color) {
+    petCreationCard.style.background = color
+}
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
     let petObj = {
@@ -210,7 +212,7 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
-        likes: 0
+        likes: 0,
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -222,7 +224,6 @@ function renderPet(pet) {
     card.className = 'card'
     card.id = 'pet-card'
     card.innerHTML = `
-    <div id="card-color" class="card-color" style= `${color}`></div>
     <div class="image-area">
         <img src="${pet.petImage}" class="pet">
         <img src="${pet.accessoryImage}" class="${pet.accessoryClass}">

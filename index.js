@@ -44,12 +44,14 @@ const kimchiButton = document.getElementById('kimchi-button')
 const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png'
 const trashButton = document.getElementById('trash-button')
 let foodButtonSelection = 0
-
-const red = document.getElementById('red')
-const pink = document.getElementById('pink')
-const blue = document.getElementById('blue')
-const yellow = document.getElementById('yellow')
-
+//////////////////////////////////////////////////////////////////
+const defaultButton = document.getElementById('default')
+const redButton = document.getElementById('red')
+const pinkButton = document.getElementById('pink')
+const blueButton = document.getElementById('blue')
+const yellowButton = document.getElementById('yellow')
+let cardColorSelection = 0
+/////////////////////////////////////////////////////////////////
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
 const infoContainer = document.getElementById('info-container')//grabbing the info area and assigning to a variable (where the name and personality goes)
@@ -69,8 +71,13 @@ buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
 buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
 buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
 buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
-
-
+////////////////////////////////////////////////////////////////////////////
+buttonEventListenerOneArg(defaultButton, cardBackground, 'white', 'click')
+buttonEventListenerOneArg(redButton, cardBackground, 'rgb(187, 77, 74)', 'click')
+buttonEventListenerOneArg(pinkButton, cardBackground, 'rgb(240, 130, 191)', 'click')
+buttonEventListenerOneArg(blueButton, cardBackground, 'rgb(180, 187, 243)', 'click')
+buttonEventListenerOneArg(yellowButton, cardBackground, 'rgb(255, 242, 182)', 'click')
+/////////////////////////////////////////////////////////////////////////////
 buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
 buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
 buttonEventListenerTwoArgs(glassesButton, accessorySelect, glasses, glassesClassName)
@@ -139,7 +146,7 @@ function petSelect(petImage) {
         image.classList.add('pet')//adds class of pet to img element for styling purposes (all pet images will have the same styling)
         imageArea.append(image)//adds the pet to the image area
     } else if (catButtonSelection % 2 === 0) {
-        image.src = ''
+        image.remove()
     }
 }
 
@@ -153,7 +160,7 @@ function accessorySelect(accessoryImage, accessoryClass) {
                                              //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
         imageArea.append(image)//adds the accessory to the image area
     } else if (accessoryButtonSelection % 2 === 0) {
-        image.src = ''
+        image.remove()
     }
 }
 
@@ -187,7 +194,16 @@ function foodSelect(foodImage, petWords) {
         phrase.remove()
     }
 }
-
+//////////////////////////////////////////////////////////////////////////////////
+function cardBackground(color) {
+    cardColorSelection++
+    if (cardColorSelection % 2 !== 0 || cardColorSelection === 1) {
+        petCreationCard.style.background = color
+    } else if (cardColorSelection % 2 === 0) {
+        petCreationCard.style.background = 'white'
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
     let petObj = {
@@ -199,7 +215,10 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
-        likes: 0
+        likes: 0,
+        //////////////////////////////////////////////
+        cardColor: petCreationCard.style.background
+        /////////////////////////////////////////////
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -210,6 +229,9 @@ function renderPet(pet) {
     let card = document.createElement('div')
     card.className = 'card'
     card.id = 'pet-card'
+    /////////////////////////////////////////////
+    card.style.background = `${pet.cardColor}` 
+    ///////////////////////////////////////////////
     card.innerHTML = `
     <div class="image-area">
         <img src="${pet.petImage}" class="pet">
@@ -248,7 +270,7 @@ function getAllPets() {
     fetch('http://localhost:3000/post')
     .then(res => res.json())
     .then(petData => petData.forEach(pet => renderPet(pet)))
-}
+} 
 
 function postPet(petObj) {
     fetch('http://localhost:3000/post', {

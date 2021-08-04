@@ -9,13 +9,17 @@ body {/*sets the color of the whole page to grey and centers all text alignment*
     padding-bottom: 60px;
 }
 
+h2 {
+  font-size: 25px;
+}
+
 p {
   font-size: 25px;
 }
 
 div {/*gives each div 10px of space surrounding it and aligns the side by side rather than up and down. all of the buttons are in divs*/
     display: inline-block;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 button {
@@ -28,9 +32,9 @@ small {
 }
 
 .comment-section {
-    font-size: 20px;
-    width: 400px;
-     
+  font-size: 20px;
+  text-align: left;
+  list-style-type: none;
 }
 
 .likes-button {
@@ -45,10 +49,16 @@ small {
     margin-bottom: 0px;
     font-size: 40pt;
     font-family: 'WindSong', cursive;
+    margin-top: 10px;
+    
+}
+
+.title-image {
+  max-width: 50px;
 }
 
 .card {/*styling for the card*/
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*adds shadow to card*/
     width: 500px;
     text-align: center;

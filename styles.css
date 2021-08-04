@@ -42,7 +42,7 @@ small {
 }
 
 .card {/*styling for the card*/
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*adds shadow to card*/
     width: 500px;
     text-align: center;
