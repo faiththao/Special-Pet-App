@@ -191,7 +191,8 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
-        likes: 0
+        likes: 0,
+        comments: [{'content': ''}]
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -214,6 +215,10 @@ function renderPet(pet) {
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>
     </div>
+    <div class="comment-section">
+        <input type="text" id="comment-content" placeholder="Add a comment...">
+        <button id='comment'>Add</button>
+    </div>
     <div>
         <span class="likes-count" id="likes-count">${pet.likes}</span> likes
         <button id="likes" class="likes-button"><3</button>
@@ -222,6 +227,14 @@ function renderPet(pet) {
         <button id="delete" class="delete-button">Delete</button>
     </div>
     `
+    card.querySelector('#comment').addEventListener('click', (e) => {
+        const comment = document.createElement('li')
+        comment.textContent = document.getElementById('comment-content').value
+        document.querySelector('.comment-section').append(comment)
+        // pet.comments.content.push(comment.textContent)
+        console.log(pet)
+    })
+
     card.querySelector('#likes').addEventListener('click', (e) => {
         pet.likes++
         card.querySelector('#likes-count').textContent = pet.likes

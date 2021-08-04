@@ -27,6 +27,12 @@ small {
     display: block;
 }
 
+.comment-section {
+    font-size: 20px;
+    width: 400px;
+     
+}
+
 .likes-button {
   margin-right: 300px;
 }
