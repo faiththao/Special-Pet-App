@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
+
 body {/*sets the color of the whole page to grey and centers all text alignment*/
     background: radial-gradient(circle, rgba(255,252,250,1) 0%, rgba(252,158,177,1) 100%);
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    padding-bottom: 60px;
 }
 
 p {
@@ -20,6 +23,10 @@ button {
   font-variant: small-caps;
 }
 
+small {
+    display: block;
+}
+
 .likes-button {
   margin-right: 300px;
 }
@@ -30,7 +37,8 @@ button {
 
 .title {/*styling for the page title*/
     margin-bottom: 0px;
-    font-size: 30pt;
+    font-size: 40pt;
+    font-family: 'WindSong', cursive;
 }
 
 .card {/*styling for the card*/
@@ -60,6 +68,7 @@ button {
 
   .submit-button {/*styles post button*/
       margin-top: 20px;
+      margin-bottom: 5px;
       width: 110px;
       padding: 10px;
   }
@@ -120,4 +129,3 @@ button {
   left: 5px;
   bottom: 5px;
 }
-

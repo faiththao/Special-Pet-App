@@ -43,6 +43,7 @@ const kimchi = 'https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi
 const kimchiButton = document.getElementById('kimchi-button')
 const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png'
 const trashButton = document.getElementById('trash-button')
+let foodButtonSelection = 0
 
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
@@ -138,12 +139,12 @@ function petSelect(petImage) {
 function accessorySelect(accessoryImage, accessoryClass) {
     accessoryButtonSelection++
     if (accessoryButtonSelection % 2 !== 0 || accessoryButtonSelection === 1) {
-    image = document.createElement('img')//creates an img element
-    image.src = accessoryImage//sets the src to whatever image is passed into the function
-    image.id = 'accessory'
-    image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
+        image = document.createElement('img')//creates an img element
+        image.src = accessoryImage//sets the src to whatever image is passed into the function
+        image.id = 'accessory'
+        image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
                                              //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
-    imageArea.append(image)//adds the accessory to the image area
+        imageArea.append(image)//adds the accessory to the image area
     } else if (accessoryButtonSelection % 2 === 0) {
         image.src = ''
     }
@@ -152,26 +153,32 @@ function accessorySelect(accessoryImage, accessoryClass) {
 function backgroundSelect(backgroundImage) {   
     backgroundButtonSelection++
     if (backgroundButtonSelection % 2 !== 0 || backgroundButtonSelection === 1) {
-    image = document.createElement('img')//creates an img element
-    image.src = backgroundImage//sets the src to whatever image is passed into the function
-    image.id = 'background'
-    image.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
-    imageArea.append(image)//adds background image to image area
+        image = document.createElement('img')//creates an img element
+        image.src = backgroundImage//sets the src to whatever image is passed into the function
+        image.id = 'background'
+        image.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
+        imageArea.append(image)//adds background image to image area
     } else if (backgroundButtonSelection % 2 === 0) {
         image.remove()
     }
 }
 
 function foodSelect(foodImage, petWords) {   
-    const image = document.createElement('img')//creates an img element
-    image.src = foodImage//sets the src to whatever image is passed into the function
-    image.id = 'food'
-    image.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
-    imageArea.append(image)//adds the food to image area
-    const phrase = document.createElement('p')//creates a p element 
-    phrase.id = 'phrase'
-    phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
-    infoContainer.append(phrase)//adds the message to the text area like a quote
+    foodButtonSelection++
+    if (foodButtonSelection % 2 !== 0 || foodButtonSelection === 1) {
+        image = document.createElement('img')//creates an img element
+        image.src = foodImage//sets the src to whatever image is passed into the function
+        image.id = 'food'
+        image.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
+        imageArea.append(image)//adds the food to image area
+        phrase = document.createElement('p')//creates a p element 
+        phrase.id = 'phrase'
+        phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
+        infoContainer.append(phrase)//adds the message to the text area like a quote
+    } else if (backgroundButtonSelection % 2 === 0) {
+        image.remove()
+        phrase.remove()
+    }
 }
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
@@ -269,7 +276,6 @@ function deletePet(id) {
     .then(res => res.json())
     .then(pet => console.log(pet))
 }
-
 
 function initialize() {
     getAllPets()

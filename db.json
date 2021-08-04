@@ -61,28 +61,16 @@
       "id": 7
     },
     {
-      "name": "robert",
-      "personality": "ridiculous",
-      "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
-      "accessoryImage": "https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png",
-      "accessoryClass": "wings",
-      "backgroundImage": "https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg",
-      "foodImage": "http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png",
-      "phrase": "\"Ew I don't like trash... but I'll still eat it\"",
-      "likes": 5,
-      "id": 8
-    },
-    {
-      "name": "fhj",
-      "personality": "hdfgz",
+      "name": "Dorngis",
+      "personality": "hes uhh comedicb hes a lil slimy he is very smart.. book smart",
       "petImage": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png",
-      "accessoryImage": "http://3.bp.blogspot.com/-V_Q4gOLNA4A/U6eR3AqpYeI/AAAAAAAAFhc/oVrngT9PtaU/s1600/glasses_001_o.png",
-      "accessoryClass": "glasses",
+      "accessoryImage": "",
+      "accessoryClass": "hat",
       "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
-      "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
-      "phrase": "\"Wow kimchi is delish :)\"",
-      "likes": 6,
-      "id": 9
+      "foodImage": "https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png",
+      "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
+      "likes": 3,
+      "id": 8
     }
   ]
 }

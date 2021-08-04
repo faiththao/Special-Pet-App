@@ -13,6 +13,7 @@ const siameseCat = 'https://www.sloppykisscards.com/images/byo/breeds/cat/siames
 const siameseButton = document.getElementById('siamese-button')
 const tiger = 'http://pngimg.com/uploads/tiger/tiger_PNG23235.png'
 const tigerButton = document.getElementById('tiger-button')
+let catButtonSelection = 0
 
 //variables for the image that will be displayed, the unique class it will have, and the button that gets pushed to select the image*****************
 const wings = 'https://i.pinimg.com/originals/f5/b9/f2/f5b9f28593029410a0ba8932ae025814.png'//assigning an image from the web to a variable
@@ -24,6 +25,7 @@ const hatButton = document.getElementById('hat-button')
 const glasses = 'http://3.bp.blogspot.com/-V_Q4gOLNA4A/U6eR3AqpYeI/AAAAAAAAFhc/oVrngT9PtaU/s1600/glasses_001_o.png'
 const glassesClassName = 'glasses'
 const glassesButton = document.getElementById('glasses-button')
+let accessoryButtonSelection = 0
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const forest = 'https://64.media.tumblr.com/299ef7bc7444857a70868cdf28dfa621/tumblr_osvulu6kC31r4u4hbo1_540.jpg'//assigning an image from the web to a variable
@@ -32,6 +34,7 @@ const ocean = 'https://64.media.tumblr.com/1b8ded1c7e509da3510f8fac3d9bc2d5/72e6
 const oceanButton = document.getElementById('ocean-button')
 const city = 'https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg'
 const cityButton = document.getElementById('city-button')
+let backgroundButtonSelection = 0
 
 //variables for the image that will be displayed and the button that can be pushed to display it*****************************************************
 const cheeseburger = 'https://imagensemoldes.com.br/wp-content/uploads/2020/03/X-Burguer-PNG.png'//assigning an image from the web to a variable
@@ -40,6 +43,7 @@ const kimchi = 'https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi
 const kimchiButton = document.getElementById('kimchi-button')
 const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png'
 const trashButton = document.getElementById('trash-button')
+let foodButtonSelection = 0
 
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
@@ -120,40 +124,61 @@ function submitPersonality() {
 }
 
 function petSelect(petImage) { 
-    const image = document.createElement('img')//creates an img element
-    image.src = petImage//sets the src to whatever image is passed into the function
-    image.id = 'pet-image'
-    image.classList.add('pet')//adds class of pet to img element for styling purposes (all pet images will have the same styling)
-    imageArea.append(image)//adds the pet to the image area
+    catButtonSelection++
+    if (catButtonSelection % 2 !== 0 || catButtonSelection === 1) {
+        image = document.createElement('img')//creates an img element
+        image.src = petImage//sets the src to whatever image is passed into the function
+        image.id = 'pet-image'
+        image.classList.add('pet')//adds class of pet to img element for styling purposes (all pet images will have the same styling)
+        imageArea.append(image)//adds the pet to the image area
+    } else if (catButtonSelection % 2 === 0) {
+        image.src = ''
+    }
 }
 
 function accessorySelect(accessoryImage, accessoryClass) {
-    const image = document.createElement('img')//creates an img element
-    image.src = accessoryImage//sets the src to whatever image is passed into the function
-    image.id = 'accessory'
-    image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
+    accessoryButtonSelection++
+    if (accessoryButtonSelection % 2 !== 0 || accessoryButtonSelection === 1) {
+        image = document.createElement('img')//creates an img element
+        image.src = accessoryImage//sets the src to whatever image is passed into the function
+        image.id = 'accessory'
+        image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
                                              //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
-    imageArea.append(image)//adds the accessory to the image area
+        imageArea.append(image)//adds the accessory to the image area
+    } else if (accessoryButtonSelection % 2 === 0) {
+        image.src = ''
+    }
 }
 
 function backgroundSelect(backgroundImage) {   
-    const image = document.createElement('img')//creates an img element
-    image.src = backgroundImage//sets the src to whatever image is passed into the function
-    image.id = 'background'
-    image.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
-    imageArea.append(image)//adds background image to image area
+    backgroundButtonSelection++
+    if (backgroundButtonSelection % 2 !== 0 || backgroundButtonSelection === 1) {
+        image = document.createElement('img')//creates an img element
+        image.src = backgroundImage//sets the src to whatever image is passed into the function
+        image.id = 'background'
+        image.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
+        imageArea.append(image)//adds background image to image area
+    } else if (backgroundButtonSelection % 2 === 0) {
+        image.remove()
+    }
 }
 
 function foodSelect(foodImage, petWords) {   
-    const image = document.createElement('img')//creates an img element
-    image.src = foodImage//sets the src to whatever image is passed into the function
-    image.id = 'food'
-    image.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
-    imageArea.append(image)//adds the food to image area
-    const phrase = document.createElement('p')//creates a p element 
-    phrase.id = 'phrase'
-    phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
-    infoContainer.append(phrase)//adds the message to the text area like a quote
+    foodButtonSelection++
+    if (foodButtonSelection % 2 !== 0 || foodButtonSelection === 1) {
+        image = document.createElement('img')//creates an img element
+        image.src = foodImage//sets the src to whatever image is passed into the function
+        image.id = 'food'
+        image.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
+        imageArea.append(image)//adds the food to image area
+        phrase = document.createElement('p')//creates a p element 
+        phrase.id = 'phrase'
+        phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
+        infoContainer.append(phrase)//adds the message to the text area like a quote
+    } else if (foodButtonSelection % 2 === 0) {
+        image.remove()
+        phrase.remove()
+    }
 }
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
@@ -252,7 +277,7 @@ function deletePet(id) {
     .then(pet => console.log(pet))
 }
 
-
 function initialize() {
     getAllPets()
 }
+
