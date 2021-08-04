@@ -68,6 +68,8 @@ buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
 buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
 buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
 buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
+// buttonEventListenerOneArg(redButton, cardBackground, red, 'click')
+
 
 buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
 buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
@@ -76,7 +78,6 @@ buttonEventListenerTwoArgs(cheeseburgerButton, foodSelect, cheeseburger, `"Yum I
 buttonEventListenerTwoArgs(kimchiButton, foodSelect, kimchi, `"Wow kimchi is delish :)"`)
 buttonEventListenerTwoArgs(trashButton, foodSelect, trash, `"Ew I don't like trash... but I'll still eat it"`)
 
-buttonEventListenerOneArg
 
 initialize()
 //event listener for the card where pet is displayed because the card is actually a form. each of the above button clicks allows the user to add to the form
@@ -107,6 +108,39 @@ function buttonEventListenerTwoArgs(button, func, arg1, arg2) {
         func(arg1, arg2)
     })
 }
+
+redButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    function cardBackground(color) {
+        petCreationCard.style.backgroundColor = 'red'
+    }
+    cardBackground();
+})
+
+pinkButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    function cardBackground(color) {
+        petCreationCard.style.backgroundColor = 'pink'
+    }
+    cardBackground();
+})
+
+blueButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    function cardBackground(color) {
+        petCreationCard.style.backgroundColor = 'blue'
+    }
+    cardBackground();
+})
+
+yellowButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    function cardBackground(color) {
+        petCreationCard.style.backgroundColor = 'yellow'
+    }
+    cardBackground();
+})
+
 //functions for each event listener****************************************************************************************************************************
 function submitName() {
     infoContainer.innerHTML = ''
@@ -165,10 +199,6 @@ function foodSelect(foodImage, petWords) {
     infoContainer.append(phrase)//adds the message to the text area like a quote
 }
 
-function cardBackground() {
-
-}
-
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
     let petObj = {
@@ -192,6 +222,7 @@ function renderPet(pet) {
     card.className = 'card'
     card.id = 'pet-card'
     card.innerHTML = `
+    <div id="card-color" class="card-color" style= `${color}`></div>
     <div class="image-area">
         <img src="${pet.petImage}" class="pet">
         <img src="${pet.accessoryImage}" class="${pet.accessoryClass}">

@@ -45,6 +45,11 @@ const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash
 const trashButton = document.getElementById('trash-button')
 let foodButtonSelection = 0
 
+const red = document.getElementById('red')
+const pink = document.getElementById('pink')
+const blue = document.getElementById('blue')
+const yellow = document.getElementById('yellow')
+
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
 const infoContainer = document.getElementById('info-container')//grabbing the info area and assigning to a variable (where the name and personality goes)
@@ -64,6 +69,7 @@ buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
 buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
 buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
 buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
+
 
 buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
 buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
@@ -102,6 +108,7 @@ function buttonEventListenerTwoArgs(button, func, arg1, arg2) {
         func(arg1, arg2)
     })
 }
+
 //functions for each event listener****************************************************************************************************************************
 function submitName() {
     infoContainer.innerHTML = ''
@@ -180,6 +187,7 @@ function foodSelect(foodImage, petWords) {
         phrase.remove()
     }
 }
+
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
     let petObj = {
