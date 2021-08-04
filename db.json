@@ -1,7 +1,6 @@
 {
   "post": [
     {
-<<<<<<< HEAD
       "name": "bob",
       "personality": "kjsfdksahfkhas",
       "petImage": "https://www.sloppykisscards.com/images/byo/breeds/cat/siamese.png",
@@ -14,8 +13,6 @@
       "likes": 7
     },
     {
-=======
->>>>>>> 06b9d41d1207f00dd1f540d39ec9c1ae4c8ab366
       "name": "dinner",
       "personality": "nice",
       "petImage": "http://pngimg.com/uploads/tiger/tiger_PNG23235.png",
@@ -50,8 +47,6 @@
       "phrase": "\"Wow kimchi is delish :)\"",
       "id": 5,
       "likes": 12
-<<<<<<< HEAD
-=======
     },
     {
       "name": "Dinner Duarte",
@@ -64,7 +59,6 @@
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "likes": 9,
       "id": 6
->>>>>>> 06b9d41d1207f00dd1f540d39ec9c1ae4c8ab366
     },
     {
       "name": "darcy",
@@ -99,7 +93,6 @@
       "backgroundImage": "https://64.media.tumblr.com/41c871e0bd0e6cc0dc7e0a2bb4d57c53/tumblr_onfa688bkm1vhp4qho1_540.jpg",
       "foodImage": "https://www.pnglib.com/wp-content/uploads/2020/01/bowl-of-kimchi_5e26d8c28589b.png",
       "phrase": "\"Wow kimchi is delish :)\"",
-<<<<<<< HEAD
       "id": 6,
       "likes": 13
     },
@@ -126,10 +119,6 @@
       "phrase": "\"Yum I love cheeseburgerzzzzzzzz\"",
       "likes": 1,
       "id": 8
-=======
-      "likes": 6,
-      "id": 9
->>>>>>> 06b9d41d1207f00dd1f540d39ec9c1ae4c8ab366
     }
   ]
 }
