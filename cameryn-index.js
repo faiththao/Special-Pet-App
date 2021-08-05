@@ -213,6 +213,11 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         phrase: document.getElementById('phrase').textContent,
         comments: {comment: ''},
         likes: 0,
+<<<<<<< HEAD
+=======
+        comment: '',
+        //////////////////////////////////////////////
+>>>>>>> 2f53752c6257f6407ed5b3f35856decb2c9910d7
         cardColor: petCreationCard.style.background
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
@@ -264,6 +269,7 @@ function renderPet(pet) {
 
     card.querySelector('#comment-form').addEventListener('submit', (e) => {
         e.preventDefault()
+<<<<<<< HEAD
         const li = document.createElement('li')
         li.textContent = `"` + card.querySelector('#comment-field').value + `" ` + `- ${card.querySelector('#user-name-field').value}`
         card.querySelector('#comments').append(li)
@@ -271,6 +277,10 @@ function renderPet(pet) {
         card.querySelector('#comment-field').value = ''
         card.querySelector('#user-name-field').value = ''
         update(pet)
+=======
+        addComment(e.target.commentInput.value)
+        // e.target.commentInput.value = ''
+>>>>>>> 2f53752c6257f6407ed5b3f35856decb2c9910d7
     })
 
     card.querySelector('#likes').addEventListener('click', (e) => {
@@ -306,6 +316,18 @@ function postPet(petObj) {
 }
 
 function update(petObj) {
+    fetch(`http://localhost:3000/post/${petObj.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(petObj)
+    })
+    .then(res => res.json())
+    .then(pet => console.log(pet))
+}
+
+function postComments(petObj) {
     fetch(`http://localhost:3000/post/${petObj.id}`, {
         method: 'PATCH',
         headers: {
