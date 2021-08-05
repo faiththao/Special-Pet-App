@@ -44,14 +44,13 @@ const kimchiButton = document.getElementById('kimchi-button')
 const trash = 'http://thisalso.com/img/projects/real-nyc-stickers/stickers/trash_pile.png'
 const trashButton = document.getElementById('trash-button')
 let foodButtonSelection = 0
-//////////////////////////////////////////////////////////////////
+
 const defaultButton = document.getElementById('default')
 const redButton = document.getElementById('red')
 const pinkButton = document.getElementById('pink')
 const blueButton = document.getElementById('blue')
 const yellowButton = document.getElementById('yellow')
 let cardColorSelection = 0
-/////////////////////////////////////////////////////////////////
 //variables for the image area of the card where the images will be displayed, and the info area where the name and personality will be displayed****
 const imageArea = document.getElementById('image-area')//grabbing the image area and assigning to a variable (where the picture goes)
 const infoContainer = document.getElementById('info-container')//grabbing the info area and assigning to a variable (where the name and personality goes)
@@ -71,13 +70,12 @@ buttonEventListenerOneArg(tigerButton, petSelect, tiger, 'click')
 buttonEventListenerOneArg(forestButton, backgroundSelect, forest, 'click')
 buttonEventListenerOneArg(oceanButton, backgroundSelect, ocean, 'click')
 buttonEventListenerOneArg(cityButton, backgroundSelect, city, 'click')
-////////////////////////////////////////////////////////////////////////////
 buttonEventListenerOneArg(defaultButton, cardBackground, 'white', 'click')
 buttonEventListenerOneArg(redButton, cardBackground, 'rgb(187, 77, 74)', 'click')
 buttonEventListenerOneArg(pinkButton, cardBackground, 'rgb(240, 130, 191)', 'click')
 buttonEventListenerOneArg(blueButton, cardBackground, 'rgb(180, 187, 243)', 'click')
 buttonEventListenerOneArg(yellowButton, cardBackground, 'rgb(255, 242, 182)', 'click')
-/////////////////////////////////////////////////////////////////////////////
+
 buttonEventListenerTwoArgs(wingsButton, accessorySelect, wings, wingsClassName)
 buttonEventListenerTwoArgs(hatButton, accessorySelect, hat, hatClassName)
 buttonEventListenerTwoArgs(glassesButton, accessorySelect, glasses, glassesClassName)
@@ -120,8 +118,8 @@ function buttonEventListenerTwoArgs(button, func, arg1, arg2) {
 function submitName() {
     infoContainer.innerHTML = ''
     const h1 = document.createElement('h1')//creates an <h1> element
-    const name = nameInput.value//assigns the value of nameInput (whatever text the user enters into the box) to name variable
-    h1.textContent = name//assigns value of name to the h1 element 
+    catName = nameInput.value//assigns the value of nameInput (whatever text the user enters into the box) to name variable
+    h1.textContent = catName//assigns value of name to the h1 element 
     h1.id = 'name'
     h1.classList.add('pet-name')//assigns the pet-name class to the h1 element for styling purposes
     infoContainer.append(h1)//adds h1 element to the info-container area (bottom) of card
@@ -131,7 +129,7 @@ function submitName() {
 function submitPersonality() {
     const p = document.createElement('p')//creates a <p> element
     const personality = personalityInput.value//assigns the value of personalityInput (whatever the user enters into the box) to personality variable
-    p.textContent = personality//assigns the value of personality to the p element
+    p.textContent = "This cat is " + personality + "!"//assigns the value of personality to the p element
     p.id = 'personality'
     infoContainer.append(p)//adds p element to the info-container area (bottom) of card
     personalityInput.value = ''//clears the text from the input area
@@ -140,61 +138,60 @@ function submitPersonality() {
 function petSelect(petImage) { 
     catButtonSelection++
     if (catButtonSelection % 2 !== 0 || catButtonSelection === 1) {
-        image = document.createElement('img')//creates an img element
-        image.src = petImage//sets the src to whatever image is passed into the function
-        image.id = 'pet-image'
-        image.classList.add('pet')//adds class of pet to img element for styling purposes (all pet images will have the same styling)
-        imageArea.append(image)//adds the pet to the image area
+        catImage = document.createElement('img')//creates an img element
+        catImage.src = petImage//sets the src to whatever image is passed into the function
+        catImage.id = 'pet-image'
+        catImage.classList.add('pet')//adds class of pet to img element for styling purposes (all pet images will have the same styling)
+        imageArea.append(catImage)//adds the pet to the image area
     } else if (catButtonSelection % 2 === 0) {
-        image.remove()
+        catImage.remove()
     }
 }
 
 function accessorySelect(accessoryImage, accessoryClass) {
     accessoryButtonSelection++
     if (accessoryButtonSelection % 2 !== 0 || accessoryButtonSelection === 1) {
-        image = document.createElement('img')//creates an img element
-        image.src = accessoryImage//sets the src to whatever image is passed into the function
-        image.id = 'accessory'
-        image.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
-                                             //class because each accessory requires different styling. Example: glasses would not be the same size as wings!)
-        imageArea.append(image)//adds the accessory to the image area
+        accImage = document.createElement('img')//creates an img element
+        accImage.src = accessoryImage//sets the src to whatever image is passed into the function
+        accImage.id = 'accessory'
+        accImage.classList.add(`${accessoryClass}`)//adds whatever class is passed into the function to element for styling purposes (each accessory will have a different
+        imageArea.append(accImage)//adds the accessory to the image area
     } else if (accessoryButtonSelection % 2 === 0) {
-        image.remove()
+        accImage.remove()
     }
 }
 
 function backgroundSelect(backgroundImage) {   
     backgroundButtonSelection++
     if (backgroundButtonSelection % 2 !== 0 || backgroundButtonSelection === 1) {
-        image = document.createElement('img')//creates an img element
-        image.src = backgroundImage//sets the src to whatever image is passed into the function
-        image.id = 'background'
-        image.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
-        imageArea.append(image)//adds background image to image area
+        bgImage = document.createElement('img')//creates an img element
+        bgImage.src = backgroundImage//sets the src to whatever image is passed into the function
+        bgImage.id = 'background'
+        bgImage.classList.add('background')//adds class of background to img element for styling purposes (all background images will have the same styling)
+        imageArea.append(bgImage)//adds background image to image area
     } else if (backgroundButtonSelection % 2 === 0) {
-        image.remove()
+        bgImage.remove()
     }
 }
 
 function foodSelect(foodImage, petWords) {   
     foodButtonSelection++
     if (foodButtonSelection % 2 !== 0 || foodButtonSelection === 1) {
-        image = document.createElement('img')//creates an img element
-        image.src = foodImage//sets the src to whatever image is passed into the function
-        image.id = 'food'
-        image.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
-        imageArea.append(image)//adds the food to image area
+        catFoodImage = document.createElement('img')//creates an img element
+        catFoodImage.src = foodImage//sets the src to whatever image is passed into the function
+        catFoodImage.id = 'food'
+        catFoodImage.classList.add('food')//adds class of food to img element for styling purposes (all foods images will have the same styling)
+        imageArea.append(catFoodImage)//adds the food to image area
         phrase = document.createElement('p')//creates a p element 
         phrase.id = 'phrase'
-        phrase.textContent = petWords//petwords is whatever message you passed as an argumnet
+        phrase.textContent = petWords + ` -${catName}`//petwords is whatever message you passed as an argumnet
         infoContainer.append(phrase)//adds the message to the text area like a quote
     } else if (foodButtonSelection % 2 === 0) {
-        image.remove()
+        catFoodImage.remove()
         phrase.remove()
     }
 }
-//////////////////////////////////////////////////////////////////////////////////
+
 function cardBackground(color) {
     cardColorSelection++
     if (cardColorSelection % 2 !== 0 || cardColorSelection === 1) {
@@ -203,7 +200,6 @@ function cardBackground(color) {
         petCreationCard.style.background = 'white'
     }
 }
-///////////////////////////////////////////////////////////////////////////////////
 //function to create an object using what is submitted from the filled out petCreationCard and post the content (object can later be uploaded to a database?)
 function handleSubmit() {//the below code runs after submit button is pushed!
     let petObj = {
@@ -215,10 +211,9 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         backgroundImage: document.getElementById('background').getAttribute('src'),
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
+        comments: {comment: ''},
         likes: 0,
-        //////////////////////////////////////////////
         cardColor: petCreationCard.style.background
-        /////////////////////////////////////////////
     }
     renderPet(petObj)//function to display the finished pet on the page below the creation card
     postPet(petObj)
@@ -226,30 +221,32 @@ function handleSubmit() {//the below code runs after submit button is pushed!
 
 //function to hard-code the pet which was created onto the page by creating a new card and filling it with the information the user entered
 function renderPet(pet) {
+    console.log(pet)
     let card = document.createElement('div')
     card.className = 'card'
     card.id = 'pet-card'
-    /////////////////////////////////////////////
     card.style.background = `${pet.cardColor}` 
-    ///////////////////////////////////////////////
     card.innerHTML = `
     <div class="image-area">
         <img src="${pet.petImage}" class="pet">
-        <img src="${pet.accessoryImage}" class="${pet.accessoryClass}">
+        <img src="${pet.accessoryImage}" class="${pet.accessoryClass}"></img>
         <img src="${pet.backgroundImage}" class="background">
         <img src="${pet.foodImage}" class="food">
     </div>
     <div class="info-container">
-        <h1 class="pet-name">${pet.name}</h1>
+        <p class="pet-name">${pet.name}</p>
         <p>${pet.personality}</p>
         <p>${pet.phrase}</p>
     </div>
-    <ul id="comment-section" class="comment-section">
-    <h2>Comments:</h2>
-    </ul>
+    <div class="comment-section">
+        <p>Comments:</p>
+        <ul id="comments">
+        </ul>
+    </div>
     <form id="comment-form">
-        <input type="text" placeholder="Add a comment..." id="commentInput">
-        <button id="comment-button" type="submit">Add</button>
+        <input type="text" id="comment-field" placeholder="Add a comment...">
+        <input type="text" id="user-name-field" placeholder="Your name...">
+        <button type="submit" id="comment-submit">Post</button>
     </form>
     <div>
         <span class="likes-count" id="likes-count">${pet.likes}</span> likes
@@ -259,16 +256,27 @@ function renderPet(pet) {
         <button id="delete" class="delete-button">Delete</button>
     </div>
     `
+    Object.values(pet.comments).forEach((e) => {
+        const postedComment = document.createElement('li')
+        postedComment.textContent = e
+        card.querySelector('#comments').append(postedComment)
+    })
+
     card.querySelector('#comment-form').addEventListener('submit', (e) => {
         e.preventDefault()
-        addComment(e.target.commentInput.value)
-        e.target.commentInput.value = ''
+        const li = document.createElement('li')
+        li.textContent = `"` + card.querySelector('#comment-field').value + `" ` + `- ${card.querySelector('#user-name-field').value}`
+        card.querySelector('#comments').append(li)
+        pet.comments[`${card.querySelector('#user-name-field').value}`] = li.textContent
+        card.querySelector('#comment-field').value = ''
+        card.querySelector('#user-name-field').value = ''
+        update(pet)
     })
-    
+
     card.querySelector('#likes').addEventListener('click', (e) => {
         pet.likes++
         card.querySelector('#likes-count').textContent = pet.likes
-        updateLikes(pet)
+        update(pet)
     })
     
     card.querySelector('#delete').addEventListener('click', (e) => {
@@ -297,7 +305,7 @@ function postPet(petObj) {
     .then(pet => console.log(pet))
 }
 
-function updateLikes(petObj) {
+function update(petObj) {
     fetch(`http://localhost:3000/post/${petObj.id}`, {
         method: 'PATCH',
         headers: {
@@ -324,8 +332,4 @@ function initialize() {
     getAllPets()
 }
 
-function addComment(comments) {
-    const comment = document.createElement('li')
-    comment.textContent = comments
-    document.querySelector('#comment-section').append(comment)
-}
+

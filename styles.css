@@ -27,6 +27,21 @@ small {
     display: block;
 }
 
+li {
+  padding-bottom: 20px;
+  list-style-type: none;
+}
+
+
+#comment-form {
+  padding-bottom: 20px;
+}
+
+.comment-section {
+  font-size: 20px;
+  text-align: left;
+}
+
 .likes-button {
   margin-right: 300px;
 }
@@ -35,10 +50,21 @@ small {
     margin-top: 0px;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
 .title {/*styling for the page title*/
     margin-bottom: 0px;
     font-size: 40pt;
-    font-family: 'WindSong', cursive;
+    font-family: 'WindSong', cursive;    
+}
+
+.title-image {
+  max-width: 100px;
+  flex-basis: 40%
 }
 
 .card {/*styling for the card*/
@@ -47,9 +73,9 @@ small {
     width: 500px;
     text-align: center;
     min-height: 540px;/*sets a min height but allows to get taller if needed (if theres a long description it will make room for all the words)*/
-    margin: 0 auto;/*centers item*/
+    margin: 0 auto;
     margin-top: 40px;
-    padding: 20px;/*space inside item*/
+    padding: 20px;
     display: block;
 }
  .image-area {
@@ -64,6 +90,11 @@ small {
   .info-container {/*sets size of text area*/
     min-width: 300px;
     min-height: 50px;
+    padding-bottom: 2px;
+  }
+
+  .comment-section {
+    width: 400px;
   }
 
   .submit-button {/*styles post button*/
@@ -71,6 +102,8 @@ small {
       margin-bottom: 5px;
       width: 110px;
       padding: 10px;
+      background: #abd5ff;
+      font-variant: small-caps;
   }
 
   .pet {/*class used on all pet images*/
