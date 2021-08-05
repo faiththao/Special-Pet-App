@@ -216,6 +216,7 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
         likes: 0,
+        comment: '',
         //////////////////////////////////////////////
         cardColor: petCreationCard.style.background
         /////////////////////////////////////////////
@@ -262,7 +263,7 @@ function renderPet(pet) {
     card.querySelector('#comment-form').addEventListener('submit', (e) => {
         e.preventDefault()
         addComment(e.target.commentInput.value)
-        e.target.commentInput.value = ''
+        // e.target.commentInput.value = ''
     })
     
     card.querySelector('#likes').addEventListener('click', (e) => {
@@ -298,6 +299,18 @@ function postPet(petObj) {
 }
 
 function updateLikes(petObj) {
+    fetch(`http://localhost:3000/post/${petObj.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(petObj)
+    })
+    .then(res => res.json())
+    .then(pet => console.log(pet))
+}
+
+function postComments(petObj) {
     fetch(`http://localhost:3000/post/${petObj.id}`, {
         method: 'PATCH',
         headers: {

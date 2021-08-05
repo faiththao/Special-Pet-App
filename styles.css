@@ -27,6 +27,14 @@ small {
     display: block;
 }
 
+h2 {
+  text-align: left;
+}
+
+.comment-section {
+  text-align: left;
+}
+
 .likes-button {
   margin-right: 300px;
 }
