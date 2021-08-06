@@ -216,7 +216,7 @@ function handleSubmit() {//the below code runs after submit button is pushed!
         foodImage: document.getElementById('food').getAttribute('src'),
         phrase: document.getElementById('phrase').textContent,
         likes: 0,
-        comments: e.target.commentInput.value,
+        comments: '',
         //////////////////////////////////////////////
         cardColor: petCreationCard.style.background
         /////////////////////////////////////////////
@@ -262,10 +262,11 @@ function renderPet(pet) {
     `
     card.querySelector('#comment-form').addEventListener('submit', (e) => {
         e.preventDefault()
-        card.querySelector('#comment-section').textContent = e.target.commentInput.value
-        // addComment(e.target.commentInput.value)
+        const li = document.createElement('li')
+        li.textContent = e.target.commentInput.value
         e.target.commentInput.value = pet.comments
         // console.log(e.target.commentInput.value = '')
+        card.querySelector('#comment-section').append(li)
         postComments(pet)
     })
     
