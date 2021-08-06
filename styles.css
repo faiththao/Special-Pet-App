@@ -15,8 +15,10 @@ p {
 
 div {/*gives each div 10px of space surrounding it and aligns the side by side rather than up and down. all of the buttons are in divs*/
     display: inline-block;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 
 button {
   background: #abd5ff;
@@ -24,7 +26,7 @@ button {
 }
 
 small {
-    display: block;
+  display: block;
 }
 
 li {
@@ -32,6 +34,9 @@ li {
   list-style-type: none;
 }
 
+#name-div {
+  display: block;
+}
 
 #comment-form {
   padding-bottom: 20px;
@@ -46,14 +51,10 @@ li {
   margin-right: 300px;
 }
 
-.pet-name {/*styling for the pet name displayed in bottom of card*/
-    margin-top: 0px;
-}
-
 .container {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .title {/*styling for the page title*/
@@ -75,7 +76,10 @@ li {
     min-height: 540px;/*sets a min height but allows to get taller if needed (if theres a long description it will make room for all the words)*/
     margin: 0 auto;
     margin-top: 40px;
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
     display: block;
 }
  .image-area {
@@ -83,7 +87,7 @@ li {
     min-width: 400px;
     min-height: 400px;
     max-height: 400px;
-    margin: 20px;
+    margin: 10px;
     position: relative;/*centers the image area inside the card*/
  }
 
@@ -94,6 +98,7 @@ li {
   }
 
   .comment-section {
+    padding-top: 2px;
     width: 400px;
   }
 
@@ -162,3 +167,4 @@ li {
   left: 5px;
   bottom: 5px;
 }
+
